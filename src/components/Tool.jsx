@@ -1,9 +1,8 @@
 // src/components/Tool.jsx
 
 import React, { useState, useEffect, useRef } from 'react';
-import DecryptedText from './DecryptedText'; 
 
-export default function Tool() {
+export function Tool() {
   const [input, setInput] = useState('');
   const [history, setHistory] = useState([
     { type: 'output', text: 'Pratik Kadam Portfolio v1.0' },
@@ -62,14 +61,7 @@ export default function Tool() {
             {line.type === 'input' ? (
               <p className="text-green-400">{line.text}</p>
             ) : (
-              <DecryptedText 
-                text={line.text} 
-                className="text-slate-300"
-                encryptedClassName="text-green-500"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-              />
+              <p className="text-slate-300 whitespace-pre-wrap">{line.text}</p>
             )}
           </div>
         ))}

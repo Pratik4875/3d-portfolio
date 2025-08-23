@@ -9,7 +9,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 
 extend({ MeshLineGeometry, MeshLineMaterial })
 
-useGLTF.preload('/models/devcard.glb')
+useGLTF.preload('/models/pratik-card.glb')
 useTexture.preload('/band.png')
 
 // This is your personalized 2D content

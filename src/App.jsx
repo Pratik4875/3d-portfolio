@@ -1,12 +1,12 @@
 // src/App.jsx
 
 import React from 'react';
-import Tool from './components/Tool';
+import { Tool } from './components/Tool';
 // --- THE FIX IS HERE ---
-// The component is named InteractiveCardCanvas, not InteractiveCard
-import { InteractiveCardCanvas } from './components/InteractiveCard'; 
+// We need to import InteractiveCardCanvas, not InteractiveCard
+import { InteractiveCardCanvas } from './components/InteractiveCard';
 
-function App() {
+export default function App() {
   return (
     <div className="relative z-0 bg-black text-white h-screen p-4 sm:p-8">
       <div className="flex flex-col lg:flex-row w-full h-full max-w-7xl mx-auto gap-8">
@@ -24,7 +24,5 @@ function App() {
 
       </div>
     </div>
-  )
+  );
 }
-
-export default App;

@@ -58,7 +58,7 @@ export default function DecryptedText({
           const nextIndex =
             revealedSet.size % 2 === 0
               ? middle + offset
-              : middle - offset - 1
+                            : middle - offset - 1
 
           if (nextIndex >= 0 && nextIndex < textLength && !revealedSet.has(nextIndex)) {
             return nextIndex
