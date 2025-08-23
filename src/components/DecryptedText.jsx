@@ -1,6 +1,7 @@
 // src/components/DecryptedText.jsx
 
 import { useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion' // <-- THE FIX IS HERE
 
 const styles = {
   wrapper: {
@@ -203,7 +204,7 @@ export default function DecryptedText({
       : {}
 
   return (
-    <span className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
+    <motion.span className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
       <span style={styles.srOnly}>{displayText}</span>
 
       <span aria-hidden="true">
@@ -221,6 +222,6 @@ export default function DecryptedText({
           )
         })}
       </span>
-    </span>
+    </motion.span>
   )
 }

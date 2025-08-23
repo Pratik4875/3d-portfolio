@@ -1,7 +1,7 @@
 // src/components/Tool.jsx
 
 import React, { useState, useEffect, useRef } from 'react';
-import DecryptedText from './DecryptedText'; // <-- Import the new component
+import DecryptedText from './DecryptedText'; 
 
 export default function Tool() {
   const [input, setInput] = useState('');
@@ -62,8 +62,6 @@ export default function Tool() {
             {line.type === 'input' ? (
               <p className="text-green-400">{line.text}</p>
             ) : (
-              // --- THE CHANGE IS HERE ---
-              // We now use the DecryptedText component for the output
               <DecryptedText 
                 text={line.text} 
                 className="text-slate-300"
